@@ -51,10 +51,10 @@ export default class SearchBox extends React.Component<ISearchBoxProps> {
         keyword = normalizeInputFormatForOutsideSearch(keyword);
         return genomeBuild === GENOME_BUILD.GRCh38
             ? fetch(
-                  `https://rest.ensembl.org/variant_recoder/human/${keyword}?content-type=application/json`
+                  `https://rest.ensembl.org/variant_recoder/dog/${keyword}?content-type=application/json`
               )
             : fetch(
-                  `https://grch37.rest.ensembl.org/variant_recoder/human/${keyword}?content-type=application/json`
+                  `https://rest.ensembl.org/variant_recoder/dog/${keyword}?content-type=application/json`
               );
     }
 
