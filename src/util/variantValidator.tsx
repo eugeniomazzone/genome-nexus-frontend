@@ -37,7 +37,7 @@ export function isVariantValid(variant: string): VariantValidStatus {
         if (variant.includes(VARIANT_OPERATOR.SNP)) {
             // chromosome(1-24,X,Y,MT) + start(number) + ref(A/T/G/C) + ">" + var(A/T/G/C)
             pattern =
-                /^\b(chr[1-9]|chr1[0-9]|chr2[0-4]|chr[XY]|(chrMT)|[1-9]|1[0-9]|2[0-4]|[XY]|(MT))\b(:g.)[0-9]*[ATGC]>[ATGC]$/i;
+                /^\b(chr[1-9]|chr1[0-9]|chr2[0-9]|chr3[0-8]|chr[XY]|(chrMT)|[1-9]|1[0-9]|2[0-4]|[XY]|(MT))\b(:g.)[0-9]*[ATGC]>[ATGC]$/i;
             if (variant.trim().match(pattern)) {
                 return {
                     isValid: true,
